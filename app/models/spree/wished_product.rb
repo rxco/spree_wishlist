@@ -11,7 +11,7 @@ class Spree::WishedProduct < ActiveRecord::Base
   		variant.cost_price = 0
   	end
   	
-    quantity * variant.cost_price
+    quantity.to_i * variant.cost_price
   end
 
   def display_total
